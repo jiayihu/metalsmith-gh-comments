@@ -15,7 +15,7 @@ npm install metalsmith-gh-comments --save
 
 ### CLI usage
 
-Install via npm and then add the `metalsmith-gh-comments` key to your `metalsmith.json` plugins with any [gh-issues-for-comments](https://github.com/jiayihu/gh-issues-for-comments) options you want.
+Install via npm and then add the `metalsmith-gh-comments` key to your `metalsmith.json` plugins with any [gh-issues-for-comments](https://github.com/jiayihu/gh-issues-for-comments) option you want.
 
 For more powerful options see [#javascript-usage](#javascript-usage).
 
@@ -23,9 +23,9 @@ For more powerful options see [#javascript-usage](#javascript-usage).
 {
   "plugins": {
     "metalsmith-gh-comments": {
-      "username": 'jiayihu',
-      "repo": 'blog',
-      "token": "123GithubOauthToken",
+      "username": "jiayihu",
+      "repo": "blog",
+      "token": "123GithubOAuthToken",
     }
   }
 }
@@ -49,7 +49,7 @@ const githubComments = require('metalsmith-gh-comments');
     idProperty: 'link', // property added by 'metalsmith-filepath'
     username: 'jiayihu',
     repo: 'blog',
-    token: process.env.GITHUB
+    token: '123GithubOAuthToken'
   })
 )
 ```
