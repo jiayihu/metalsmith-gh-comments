@@ -4,6 +4,7 @@
 
 Metalsmith plugin to automatically open a **Github issue as blog comments** for every articles of your blog. It also creates a `gh-comments.json` file to keep track of created issues. Uses [gh-issues-for-comments](https://github.com/jiayihu/gh-issues-for-comments) under the hood.
 
+**Notes**: a property `issueId` is added to each article for templates usage.
 
 ## Install
 
