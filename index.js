@@ -24,11 +24,11 @@ module.exports = function(userOpts) {
 
     ghComments(articles, ghCommentsOptions)
       .then(createdIssues => {
+        const articles = Object.keys(files).map(filepath => files[filepath]);
+
         Object.keys(createdIssues).forEach(key => {
           const issueId = createdIssues[key].issueId;
-          const article = Object.keys(files)
-            .map(filepath => files[filepath])
-            .find(article => article[opts.idProperty || 'id'] === key);
+          const article = articles.find(article => article[opts.idProperty || 'id'] === key);
 
           // Add `issueId` property to the article to be used in templates
           article.issueId = issueId;
